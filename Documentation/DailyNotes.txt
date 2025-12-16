@@ -1,0 +1,149 @@
+DAILY NOTES
+
+1. 15/12/2025
+
+	A. Create GitHub account
+		username=vaishnavigiri1210
+
+	B. Installation of docker for creating same virtual environment on any system
+ 		what is docker??
+ 			Docker creates its OWN environment
+ 			GitHub does NOT store environments
+ 			Docker creates everything at runtime
+ 		need of requirements.txt??
+ 			tells about libraries
+ 			Install EXACTLY these libraries with EXACT versions
+ 			Same environment on any system
+
+ 	C. creates first project
+
+ 		first\_docker\_demo/
+ 			├── app.py
+ 			├── requirements.txt
+ 			└── Dockerfile
+
+	D. uploaded on GitHub
+		commands:
+ 			git init
+ 			git add .
+ 			git status
+ 			git commit -m "commited msg"
+ 			git branch -M main
+ 			git remote add origin https://github.com/vaishnavigiri1210/first-docker-demo.git
+ 			git push -u origin main
+		Whenever you change something:
+ 			git add .
+ 			git commit -m "updated code"
+ 			git push
+
+2. 16/12/2025
+
+	A. Python Basics
+
+		Python is a high-level, interpreted, general-purpose programming language.
+ 		Basic Syntax:
+ 			print("Hello, World!")
+ 		Comments:
+ 			# This is a single-line comment
+ 			"""
+ 			This is a
+ 			multi-line comment
+ 			"""
+
+		Variables and Data Types:
+			Python doesn’t need explicit type declaration.
+				x = 10          # integer
+				y = 3.14        # float
+				name = "Vaishnavi"  # string
+				is\_active = True   # Boolean
+
+		Operators:
+	 			Arithmetic: + - \* / % // \*\*
+	 			Comparison: == != > < >= <=
+	 			Logical:
+						and → True if both conditions are True
+						or → True if any condition is True
+						not → True if condition is False
+	 			Assignment: =, +=, -=, \*=, /=
+
+	B. Decision Making
+
+		Decision making means choosing between different paths in a program based on a condition.
+
+		1. if Statement
+			Executes a block of code only if the condition is True.
+				Syntax:
+					if condition:
+						# code to execute
+				Example:
+					age = 18
+					if age >= 18:
+						print("You are an adult")
+
+		2. if-else Statement
+			Executes one block if True, another block if False.
+				Syntax:
+					if condition:
+    					# code if True
+					else:
+    					# code if False
+				Example:
+					age = 16
+					if age >= 18:
+						print("You can vote")
+					else:
+						print("Too young to vote")
+
+		3. if-elif-else Statement
+			Used when there are multiple conditions.
+			Syntax:
+				if condition1:
+					# code
+				elif condition2:
+					# code
+				else:
+					# code
+
+			Example:
+				marks = 75
+				if marks >= 90:
+					print("Grade A")
+				elif marks >= 75:
+					print("Grade B")
+				elif marks >= 50:
+					print("Grade C")
+				else:
+					print("Fail")
+
+		4. Nested if Statement
+			if statement inside another if statement.
+			Syntax:
+				if condition1:
+					if condition2:
+						# code
+			Example:
+				num = 10
+				if num > 0:
+					if num % 2 == 0:
+						print("Positive Even Number")
+					else:
+						print("Positive Odd Number")
+				else:
+					print("Negative Number")
+
+	C. .gitignore file
+		which can ignores while uploading on git
+		it consists file path(relative) or file name
+		mainly used for env folder because 
+			Large Size
+			Platform Dependency
+			Redundant i.e. By running pip install -r requirements.txt, anyone can recreate the environment from scratch.
+			Security Risks i.e.Virtual environments may contain system-specific paths, hidden files, or sensitive cache data.
+		
+		steps to install env
+			1. run on terminal = py -m venv env
+			2. Then activate env = env\Scripts\activate
+				You should see:
+					(env) PS C:\Users\Vaishnavi Giri\Desktop\@GPP\Internship>
+			3. Install libraries
+				pip install -r requirements.txt
