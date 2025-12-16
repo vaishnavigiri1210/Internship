@@ -29,7 +29,7 @@ DAILY NOTES
  			git status
  			git commit -m "commited msg"
  			git branch -m main
- 			git remote add origin https://github.com/vaishnavigiri1210/first-docker-demo.git
+ 			git remote add origin https://github.com/vaishnavigiri1210/Internship.git
  			git push -u origin main
 		Whenever you change something:
  			git add .
