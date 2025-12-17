@@ -185,3 +185,33 @@ DAILY NOTES
 			for i in range(1, 4):
 				for j in range(1, 4):
 					print(i, j)
+	
+	B.Control Statements in Python
+		break → exits the loop immediately.
+			for i in range(5):
+				if i == 3:
+					break
+				print(i)
+
+		continue → skips the current iteration and moves to next.
+
+			for i in range(5):
+				if i == 3:
+					continue
+				print(i)
+
+		pass → does nothing, placeholder for future code.
+
+			for i in range(5):
+				pass
+
+	C. Data Structures in Python
+
+	| Data Structure | Ordered   | Mutable | Duplicates |
+	| List           | ✅       | ✅       | ✅      |
+	| Tuple          | ✅       | ❌       | ✅      |
+	| Set            | ❌       | ✅       | ❌      |
+	| Dictionary     | ❌       | ✅       | Keys ❌ | Stores data in key : value pairs
+
+	List Comprehension in Python
+		List comprehension is a short and smart way to create a new list from an existing list using one line of code
