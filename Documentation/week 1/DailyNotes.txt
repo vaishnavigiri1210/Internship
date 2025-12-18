@@ -208,9 +208,9 @@ DAILY NOTES
 	C. Data Structures in Python
 
 	| Data Structure | Ordered   | Mutable | Duplicates |
-	| List           | ✅       | ✅       | ✅      |
-	| Tuple          | ✅       | ❌       | ✅      |
-	| Set            | ❌       | ✅       | ❌      |
+	| List           | ✅       | ✅       | ✅      |  []
+	| Tuple          | ✅       | ❌       | ✅      |  ()
+	| Set            | ❌       | ✅       | ❌      |	  
 	| Dictionary     | ❌       | ✅       | Keys ❌ | Stores data in key : value pairs
 
 	List Comprehension in Python
