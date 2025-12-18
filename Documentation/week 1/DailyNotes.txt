@@ -210,8 +210,8 @@ DAILY NOTES
 	| Data Structure | Ordered   | Mutable | Duplicates |
 	| List           | ✅       | ✅       | ✅      |  []
 	| Tuple          | ✅       | ❌       | ✅      |  ()
-	| Set            | ❌       | ✅       | ❌      |	  
-	| Dictionary     | ❌       | ✅       | Keys ❌ | Stores data in key : value pairs
+	| Set            | ❌       | ✅       | ❌      |	 {} 
+	| Dictionary     | ❌       | ✅       | Keys ❌ | {Stores data in key : value pairs}
 
 	List Comprehension in Python
 		List comprehension is a short and smart way to create a new list from an existing list using one line of code

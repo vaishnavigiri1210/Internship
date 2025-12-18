@@ -41,7 +41,8 @@ for n in a:
 num=(23,(2,7),11,36)
 print(num)
 print(num[1])
-print(a[1][0])
+v=(num[1][0])
+print(v)
 
 #
 info=1,23,67,89.45,'vaishu'
