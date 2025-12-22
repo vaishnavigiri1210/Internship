@@ -1,0 +1,176 @@
+1. 22/12/25
+
+    A. Function in Python
+
+        A function in Python is a block of reusable code that performs a specific task.
+        Instead of writing the same code again and again, we put it inside a function and call it whenever needed.
+        Function is defined using def
+        Function must be called to execute
+        A function can return multiple values
+        Why use functions?
+            To reduce code repetition
+            To make code clean and readable
+            Easy debugging and maintenance
+            Divide a big program into small parts
+        Syntax of Function
+            def function_name(parameters):
+                statements
+                return value
+        where:
+            def → keyword to define a function
+            function_name → name of the function
+            parameters → inputs (optional)
+            return → sends result back (optional)
+        1. Built-in Functions:
+            Already available in Python
+            Examples:
+                print()
+                len()
+                type()
+        2. User-defined Functions:
+                Created by the user
+                def square(n):
+                    return n * n
+
+        3. Function with Default Arguments:
+            def greet(name="User"):
+                print("Hello", name)
+
+            greet()
+            greet("Vaishnavi")
+
+        4. Function with Multiple Return Values:
+            def calc(a, b):
+                return a+b, a-b
+
+            x, y = calc(10, 5)
+            print(x, y)
+
+    B. Module in Python
+
+        Module = Python file
+        A module in Python is a file that contains Python code such as functions, variables, and classes.
+        The file name ends with .py and can be reused in other programs using the import keyword.
+
+        Why use Modules?
+            Code reusability
+            Better organization of large programs
+            Easy maintenance
+            Avoid writing same code again
+        
+        Types of Modules in Python
+        
+            1. Built-in Modules
+
+                Already provided by Python
+
+                Examples:
+                    math → mathematical operations
+                    random → generates random values
+                    datetime → date and time handling
+                    sys → system-related information  
+
+            2. User-Defined Modules
+
+                Modules created by the user
+            
+                Ways to Import Modules:
+                    1. import module_name
+                        import math
+                        print(math.pi)
+
+                    2. import module_name as alias
+                        import math as m
+                        print(m.sqrt(16))
+
+                    3. from module import function
+                        from math import sqrt
+                        print(sqrt(36))
+
+                    4. from module import *
+                        from math import *
+                        print(sin(0))
+
+    C. Library in Python
+
+        A library in Python is a collection of modules that provides ready-made functions, classes, and tools to perform specific tasks easily.
+        Module = one file
+        Library = collection of modules
+        Library is a collection of modules
+        Helps in faster development
+        Can be built-in or external
+        Imported using import
+        A library in Python is a collection of modules that provides reusable code for specific tasks.
+        1 file → module
+        2 or more module files → library
+        
+        Why use Libraries?
+            Saves time and effort
+            No need to write code from scratch
+            Makes programs powerful and efficient
+            Widely used in industry & projects
+
+        Types of Libraries in Python:
+
+            1. Standard (Built-in) Libraries
+
+                Already available with Python installation
+
+                Examples:
+                    math
+                    random
+                    datetime
+                    sys
+                    os
+
+                Example:
+                    import math
+                    print(math.factorial(5))
+
+            2. External (Third-Party) Libraries
+
+                Need to be installed using pip
+
+                Examples:
+
+                    numpy → numerical computing
+                    pandas → data analysis
+                    matplotlib → data visualization
+                    scikit-learn → machine learning
+                    flask → web development
+
+                Install example:
+                    pip install numpy
+
+
+                Use example:
+
+                    import numpy as np
+                    print(np.array([1, 2, 3]))
+
+        Real-Life Example
+            Library = Book
+            Module = Chapter
+            Function = Topic inside chapter
+    
+    D. Difference between function,module,library
+
+        | Feature     | Function                            | Module             | Library                   |
+        | ----------- | ----------------------------------- | ------------------ | ------------------------- |
+        | What is it? | Block of code                       | Single Python file | Collection of modules     |
+        | Stored in   | Program or module                   | `.py` file         | Folder/package of modules |
+        | Created by  | User                                | User / Python      | Python / User             |
+        | Reusability | Only inside program (or via module) | Across programs    | Across programs           |
+        | Example     | `def add(a,b)`                      | `mymodule.py`      | `math`, `random`          |
+
+    E. What is __init__.py?
+
+        __init__.py is a special Python file that tells Python:
+            “This folder is a package (library)”
+
+        It makes a folder importable
+        __init__.py does not contain only constants
+        it may be empty or contain import statements and optional variables.
+
+    F. Type Hinted in Python
+    Type hinted in Python means using type hints (type annotations) to specify the expected data types of variables, function parameters, and return values.
