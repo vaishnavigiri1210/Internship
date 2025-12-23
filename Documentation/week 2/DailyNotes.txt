@@ -172,4 +172,19 @@
         it may be empty or contain import statements and optional variables.
 
     F. Type Hinted in Python
-    Type hinted in Python means using type hints (type annotations) to specify the expected data types of variables, function parameters, and return values.
+        Type hinted in Python means using type hints (type annotations) to specify the expected data types of variables, function parameters, and return values.
+
+    G. __main__ in Python
+        In Python, __main__ is used to check whether a Python file is being run directly or being imported as a module.
+        Run code only when file is executed directly, not when imported
+        __main__ is used to prevent code execution when a Python file is imported as a module.
+
+        What is __name__?
+            Every Python file has a built-in variable called __name__.
+            If the file is run directly, __name__ is set to "__main__".
+            If the file is imported, __name__ is set to the file name.
+
+        Why use if __name__ == "__main__":?
+            It allows you to:
+            Run some code only when the file is executed directly
+            Prevent that code from running when the file is imported
