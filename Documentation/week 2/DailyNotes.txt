@@ -1,4 +1,4 @@
-1. 22/12/25
+1. 22/12/25-23/12/25
 
     A. Function in Python
 
@@ -7,20 +7,35 @@
         Function is defined using def
         Function must be called to execute
         A function can return multiple values
+        A function is a block of code which only runs when it is called.
+        A function can return data as a result.
+        A function helps avoiding code repetition
+
+        Function names follow the same rules as variable names in Python:
+            A function name must start with a letter or underscore
+            A function name can only contain letters, numbers, and underscores
+            Function names are case-sensitive (myFunction and myfunction are different)
+        
         Why use functions?
             To reduce code repetition
             To make code clean and readable
             Easy debugging and maintenance
             Divide a big program into small parts
+        
         Syntax of Function
             def function_name(parameters):
                 statements
                 return value
-        where:
-            def → keyword to define a function
-            function_name → name of the function
-            parameters → inputs (optional)
-            return → sends result back (optional)
+                where:
+                    def → keyword to define a function
+                    function_name → name of the function
+                    parameters → inputs (optional)
+                    return → sends result back (optional)
+        
+        From a function's perspective:
+            A parameter is the variable listed inside the parentheses in the function definition.
+            An argument is the actual value that is sent to the function when it is called.
+        
         1. Built-in Functions:
             Already available in Python
             Examples:
@@ -46,6 +61,36 @@
             x, y = calc(10, 5)
             print(x, y)
 
+        Python Decorators
+            Decorators let you add extra behavior to a function, without changing the function's code.
+            A decorator is a function that takes another function as input and returns a new function.
+        
+        Lambda Function in python
+            A lambda function is a small anonymous function.
+            A lambda function can take any number of arguments, but can only have one expression.
+            
+            Built in lambda function
+
+            1. map()
+                Purpose: Apply a function to each element of a sequence.
+                Syntax
+                    map(function, iterable)
+            2. filter()
+                Purpose: Select elements based on a condition.
+                Syntax
+                    filter(function, iterable)
+            3. reduce()
+                Purpose: Reduce a list to one single value.
+                reduce() is present in functools module.
+                Syntax
+                    from functools import reduce
+                    reduce(function, iterable)
+            4. sorted()
+                Purpose: Sort elements using custom logic.
+            
+        Recursion
+            Recursion is when a function calls itself.
+                
     B. Module in Python
 
         Module = Python file
@@ -76,20 +121,20 @@
             
                 Ways to Import Modules:
                     1. import module_name
-                        import math
-                        print(math.pi)
+                            import math
+                            print(math.pi)
 
                     2. import module_name as alias
-                        import math as m
-                        print(m.sqrt(16))
+                            import math as m
+                            print(m.sqrt(16))
 
                     3. from module import function
-                        from math import sqrt
-                        print(sqrt(36))
+                            from math import sqrt
+                            print(sqrt(36))
 
                     4. from module import *
-                        from math import *
-                        print(sin(0))
+                            from math import *
+                            print(sin(0))
 
     C. Library in Python
 

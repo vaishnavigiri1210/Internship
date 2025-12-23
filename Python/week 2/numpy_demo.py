@@ -50,3 +50,8 @@ print(arr[:4])      #output: [1 2 3 4]
 print(arr[2:])      #output: [3 4 5]
 print(arr2[0:2, 1:3]) #output: [[2 3]
                       #         [5 6]]
+
+# checking datatype of array
+print(arr.dtype)
+fruits=np.array(['apple', 'banana', 'cherry'])
+print(fruits.dtype)
