@@ -9,6 +9,7 @@ How to run :
 
 Key Features :
     - Store student data 
-    - Identify class toppers.
+    - Identify class toppers
+    - Handle invalid marks
 
 Edutrack system will identify weak students and top performers using analytical logic.
