@@ -1,0 +1,22 @@
+08/01/2026-15/01/2026
+        Project : Edutrack
+
+# 1️⃣ Clone the repo (replace <repo-url> with your repo link)
+git clone <repo-url>
+
+# 2️⃣ Go into the project folder
+cd <project-folder-name>
+
+# 3️⃣ Update main branch to make sure it's latest
+git checkout main
+git pull origin main
+
+# 4️⃣ Create your own feature branch
+git checkout -b feature/my-feature
+
+# 5️⃣ Start coding! (all your changes now stay in this branch)
+
+
+git add .
+git commit -m "Describe your feature"
+git push origin feature/my-feature

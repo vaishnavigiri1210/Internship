@@ -1,0 +1,6 @@
+Date : 10/01/2026
+
+| Command                      | Local PC  | GitHub    |
+| ---------------------------- | --------- | --------- |
+| `git rm -r Project`          | ❌ Deleted | ❌ Deleted |
+| `git rm -r --cached Project` | ✅ Kept    | ❌ Deleted |
