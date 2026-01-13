@@ -20,3 +20,21 @@ git checkout -b feature/my-feature
 git add .
 git commit -m "Describe your feature"
 git push origin feature/my-feature
+
+
+
+git checkout main
+git pull origin main
+
+UI_Changes developer:
+
+        git checkout UI_Changes
+        git merge main
+
+updated-code developer:
+
+        git checkout updated-code
+        git merge main
+
+git push origin UI_Changes
+git push origin updated-code
