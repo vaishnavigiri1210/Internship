@@ -1,0 +1,5 @@
+learned topic Probability and naive bayes algorithm
+i revised ml basicsclassification regression cross validation feature encoding feature selection
+ml algorithms => linear regression
+different accuracy metrices
+all above topics revision done
