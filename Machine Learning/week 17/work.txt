@@ -1,0 +1,7 @@
+REVISION
+
+hyper parameter tuning
+
+feature selection and feature extraction techniques
+
+ensemble learning

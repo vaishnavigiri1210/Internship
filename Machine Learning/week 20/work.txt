@@ -1,0 +1,3 @@
+hierarchical clustering
+association rule mining
+t-sne
