@@ -5,8 +5,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-st.title("🔥 TEST UPDATE 🔥")
-
 # ---------------- CONFIG ----------------
 st.set_page_config(page_title="Student Predictor", page_icon="🎓", layout="centered")
 
