@@ -10,16 +10,18 @@ lr_model = pickle.load(open("lr_model.pkl", "rb"))
 log_model = pickle.load(open("log_model.pkl", "rb"))
 scaler = pickle.load(open("scaler.pkl", "rb"))
 
-# ---------------- PAGE CONFIG ----------------
+# Load dataset once
+df = pd.read_csv("StudentsPerformance.csv")
+
+# ---------------- UI ----------------
 st.set_page_config(page_title="Student Predictor", page_icon="🎓")
 
-# ---------------- HEADER ----------------
 st.title("🎓 Student Performance Predictor")
-st.write("Predict student score and result")
+st.write("Enter student details to predict performance")
 
 st.markdown("---")
 
-# ---------------- INPUT SECTION ----------------
+# ---------------- INPUT ----------------
 st.subheader("📥 Enter Details")
 
 col1, col2 = st.columns(2)
@@ -42,18 +44,18 @@ input_data = np.array([[gender, math, reading, writing, test]])
 
 st.markdown("---")
 
-# ---------------- PREDICTIONS ----------------
+# ---------------- PREDICTION ----------------
 st.subheader("📊 Results")
 
 col1, col2 = st.columns(2)
 
-# 🔵 Score
+# Score Prediction
 with col1:
     if st.button("Predict Score"):
         score = lr_model.predict(input_data)
-        st.success(f"Average Score: {score[0]:.2f}")
+        st.metric("Average Score", f"{score[0]:.2f}")
 
-# 🟢 Result
+# Pass/Fail
 with col2:
     if st.button("Predict Result"):
         input_scaled = scaler.transform(input_data)
@@ -70,41 +72,50 @@ with col2:
 st.markdown("---")
 
 # ---------------- INSIGHT ----------------
-avg = (math + reading + writing) / 3
+avg_input = (math + reading + writing) / 3
 
-if avg < 50:
+if avg_input < 50:
     st.warning("Low performance")
-elif avg < 70:
+elif avg_input < 70:
     st.info("Average performance")
 else:
     st.success("Good performance")
 
 st.markdown("---")
 
-# ---------------- SMALL GRAPH ----------------
-st.subheader("📊 Score Comparison")
+# ---------------- DYNAMIC GRAPH ----------------
+st.subheader("📊 Compare Your Score")
 
-df = pd.read_csv("StudentsPerformance.csv")
+if st.button("Show Comparison Graph"):
 
-avg_scores = [
-    df["math score"].mean(),
-    df["reading score"].mean(),
-    df["writing score"].mean()
-]
+    avg_dataset = (
+        df["math score"] +
+        df["reading score"] +
+        df["writing score"]
+    ).mean() / 1  # already mean of total
 
-subjects = ["Math", "Reading", "Writing"]
+    chart_df = pd.DataFrame({
+        "Type": ["Your Score", "Dataset Average"],
+        "Score": [avg_input, avg_dataset]
+    })
 
-fig, ax = plt.subplots(figsize=(5,3))  # 👈 smaller size
+    fig, ax = plt.subplots(figsize=(4,3))
 
-ax.bar(subjects, avg_scores, color=["skyblue", "lightgreen", "salmon"])
+    sns.barplot(
+        x="Type",
+        y="Score",
+        data=chart_df,
+        ax=ax,
+        palette=["skyblue", "lightgreen"]
+    )
 
-for i, v in enumerate(avg_scores):
-    ax.text(i, v + 1, f"{v:.1f}", ha='center', fontsize=8)
+    for i, v in enumerate(chart_df["Score"]):
+        ax.text(i, v + 1, f"{v:.1f}", ha='center', fontsize=9)
 
-ax.set_title("Avg Scores", fontsize=10)
-ax.set_ylabel("Marks", fontsize=9)
+    ax.set_title("Your Score vs Dataset Average", fontsize=10)
+    ax.set_ylabel("Marks")
 
-st.pyplot(fig)
+    st.pyplot(fig)
 
 st.markdown("---")
 
