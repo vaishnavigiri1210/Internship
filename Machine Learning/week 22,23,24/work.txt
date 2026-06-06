@@ -1,0 +1,3 @@
+assignes project to group members
+
+project name =  Product Review Sentiment Analysis  
